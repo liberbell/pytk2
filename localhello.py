@@ -11,5 +11,9 @@ class HelloApp:
         ttk.Button(master, text='Hawaii',
                    command = self.hawaii_hello).grid(row=1, column=1)
     def texas_hello(self):
+        self.label.config(text = 'Howdy, Tkinter!')
+
+    def hawaii_hello(self):
+        self.label.config(text = 'Aloha, Tkinter!')
         
 root = Tk()
