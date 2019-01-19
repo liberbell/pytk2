@@ -19,7 +19,8 @@ model.add(Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(32,
 model.add(Conv2D(32, (3, 3), activation='relu'))
 model.add(Conv2D(64, (3, 3), padding='same', activation='relu'))
 model.add(Conv2D(64, (3, 3), activation='relu'))
-model.add(Conv2D(32, (3, 3), )
+model.add(Flatten())
+
 model.add(Dense(512, activation='relu'))
 model.add(Dense(10, activation='softmax'))
 
