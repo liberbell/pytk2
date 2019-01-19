@@ -13,3 +13,9 @@ x_test = x_test /255
 
 y_train = keras.utils.to_categorical(y_train, 10)
 y_test = keras.utils.to_categorical(y_test, 10)
+
+model = Sequential()
+model.add(Dense(512, activation='relu', input_shape(32, 32, 3)))
+model.add(Dense(10, activation='softmax'))
+
+model.summary()
