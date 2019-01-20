@@ -33,7 +33,7 @@ model.add(Dense(10, activation='softmax'))
 
 model.compile(
     loss = 'categorical_crossentoropy',
-    optimizer= = 'adam',
+    optimizer = 'adam',
     metrics = ['accuracy']
 )
 model.summary()
