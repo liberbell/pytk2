@@ -46,4 +46,4 @@ model.fit(
     shuffle=True
 )
 
-model.summary()
+# model.summary()
