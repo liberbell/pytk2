@@ -50,4 +50,6 @@ model_structure = model.to_json()
 f = Path('model_structure.json')
 f.write_text(model_structure)
 
+model.sample_weights('model_weights.h5')
+
 # model.summary()
