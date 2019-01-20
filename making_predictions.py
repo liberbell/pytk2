@@ -15,3 +15,8 @@ class_labels = [
     'Boat',
     'Truck'
 ]
+
+f = Path('model_structure.json')
+model_structure= f.read_text()
+
+model = model_from_json(model_structure)
