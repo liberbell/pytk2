@@ -36,4 +36,14 @@ model.compile(
     optimizer = 'adam',
     metrics = ['accuracy']
 )
+
+model.fit(
+    x_train,
+    y_train,
+    batch_size=32,
+    epochs=30,
+    validation_data=(x_test, y_test),
+    shuffle=True
+)
+
 model.summary()
