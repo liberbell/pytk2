@@ -29,3 +29,8 @@ list_of_images = np.expand_dims(image_to_test, axis=0)
 
 results = model.predict(list_of_images)
 single_result = results[0]
+
+mostly_likely_class_index = int(np.argmax(single_result))
+class_likelihood = single_result[mostly_likely_class_index]
+
+class_label = 
