@@ -46,4 +46,8 @@ model.fit(
     shuffle=True
 )
 
+model_structure = model.to_json()
+f = Path('model_structure.json')
+f.write_text(model_structure)
+
 # model.summary()
