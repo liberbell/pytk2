@@ -33,4 +33,5 @@ single_result = results[0]
 mostly_likely_class_index = int(np.argmax(single_result))
 class_likelihood = single_result[mostly_likely_class_index]
 
-class_label = 
+class_label = class_labels[mostly_likely_class_index]
+print('This is image is a {} - Likeihood: {:2f}'.format(class_label, class_likelihood))
