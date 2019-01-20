@@ -17,7 +17,7 @@ class_labels = [
 ]
 
 f = Path('model_structure.json')
-model_structure= f.read_text()
+model_structure = f.read_text()
 
 model = model_from_json(model_structure)
 model.load_weight('model_weights.h5')
