@@ -31,4 +31,9 @@ model.add(Dense(512, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(10, activation='softmax'))
 
+model.compile(
+    loss = 'categorical_crossentoropy',
+    optimizer= = 'adam',
+    metrics = ['accuracy']
+)
 model.summary()
