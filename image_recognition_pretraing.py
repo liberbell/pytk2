@@ -14,6 +14,9 @@ x = vgg16.preprocess_input(x)
 
 predictions = model.predict(x)
 
-predected_clases = 
+predected_clases = vgg16.decode_predictions(predictions, top=9)
 
 print('Top predictions for thsi images:')
+
+for imagenet_id, name, likehood in predected_clases[0]:
+    print('Predicton: {} - {:2f}'.format(name, likehood))
