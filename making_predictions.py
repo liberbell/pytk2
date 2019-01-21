@@ -22,7 +22,7 @@ model_structure = f.read()
 model = model_from_json(model_structure)
 model.load_weights('model_weights.h5')
 
-img = image.load_img('cat.png', target_size=(32, 32))
+img = image.load_img('flog.png', target_size=(32, 32))
 image_to_test = image.img_to_array(img)
 
 list_of_images = np.expand_dims(image_to_test, axis=0)
