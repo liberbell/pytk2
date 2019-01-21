@@ -10,10 +10,10 @@ x = image.img_to_array(img)
 
 x = np.expand_dims(x, axis=0)
 
-x =
+x = vgg16.preprocess_input(x)
 
-predictions =
+predictions = model.predict(x)
 
-predected_clases =
+predected_clases = 
 
 print('Top predictions for thsi images:')
