@@ -9,6 +9,7 @@ x_train = joblib.load('x_train.dat')
 y_train = joblib.load('y_train.dat')
 
 model = Sequential()
+
 model.add(Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(32, 32, 3)))
 model.add(Conv2D(32, (3, 3), activation='relu'))
 model.add(MaxPool2D(pool_size=(2, 2)))
