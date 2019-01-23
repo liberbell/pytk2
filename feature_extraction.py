@@ -12,9 +12,12 @@ images = []
 labels = []
 
 for img in not_dog_path.glob('*.ong'):
-    img = image.load_img(mg)
+    img = image.load_img(img)
 
     image_array = image.img_to_array(img)
     images.append(image_array)
 
     labels.append(0)
+
+for img in dog_path.glob('*.png'):
+    img = image.load_img(img)
