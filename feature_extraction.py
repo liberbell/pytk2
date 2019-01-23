@@ -27,8 +27,8 @@ for img in dog_path.glob('*.png'):
 
     labels.append(1)
 
-x_train =
-y_train =
+x_train = np.array(images)
+y_train = np.array(labels)
 
 x_train = vgg16.preprocess_input(x_train)
 
