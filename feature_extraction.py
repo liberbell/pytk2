@@ -21,3 +21,19 @@ for img in not_dog_path.glob('*.ong'):
 
 for img in dog_path.glob('*.png'):
     img = image.load_img(img)
+
+    image_array = image.img_to_array(img)
+    images.append(image_array)
+
+    labels.append(1)
+
+x_train =
+y_train =
+
+x_train = vgg16.preprocess_input(x_train)
+
+pretrained_nn =
+features_x =
+
+joblib.dump(features_x, 'x_train.dat')
+joblib.dump(y_train, 'y_train.dat')
