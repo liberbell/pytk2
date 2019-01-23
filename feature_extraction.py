@@ -32,7 +32,7 @@ y_train = np.array(labels)
 
 x_train = vgg16.preprocess_input(x_train)
 
-pretrained_nn = vgg16.VGG16(weights='imagenet')
+pretrained_nn = vgg16.VGG16(weights='imagenet', include_top=False, input_shape(64, 64, 3))
 features_x =
 
 joblib.dump(features_x, 'x_train.dat')
