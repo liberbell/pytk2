@@ -12,6 +12,8 @@ model = Sequential()
 
 model.add(Flatten(input_shape=x_train.shape[1:]))
 model.add(Dense(256, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(1, activation='sigmoid'))
 
 
 model.add(Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(32, 32, 3)))
