@@ -10,6 +10,10 @@ y_train = joblib.load('y_train.dat')
 
 model = Sequential()
 
+model.add(Flatten(input_shape=x_train.shape[1:]))
+model.add(Dense(256, activation='relu'))
+
+
 model.add(Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(32, 32, 3)))
 model.add(Conv2D(32, (3, 3), activation='relu'))
 model.add(MaxPool2D(pool_size=(2, 2)))
