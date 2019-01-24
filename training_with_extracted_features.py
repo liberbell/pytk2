@@ -3,8 +3,6 @@ from keras.layers import Dense, Dropout, Flatten
 from pathlib import Path
 import joblib
 
-(x_train, y_train), (x_test, y_test) = cifar10.load_data()
-
 x_train = joblib.load('x_train.dat')
 y_train = joblib.load('y_train.dat')
 
