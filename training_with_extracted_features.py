@@ -27,7 +27,7 @@ model.fit(
 )
 
 model_structure = model.to_json()
-f = Path('model_structure.json')
+f = open('model_structure.json', 'w')
 f.write(model_structure)
 
 model.save_weights('model_weights.h5')
