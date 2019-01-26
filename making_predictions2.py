@@ -13,6 +13,10 @@ model.load_weights('model_weights.h5')
 
 img = image.load_img('dog.png', target_size=(64, 64))
 
+image_array = image.img_to_array(img)
+
+
+
 class_labels = [
     'Plane',
     'Car',
