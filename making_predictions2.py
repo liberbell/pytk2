@@ -15,7 +15,7 @@ img = image.load_img('dog.png', target_size=(64, 64))
 
 image_array = image.img_to_array(img)
 
-
+images = np.expand_dims(image_array, axis=0)
 
 class_labels = [
     'Plane',
