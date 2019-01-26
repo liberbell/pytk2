@@ -4,6 +4,15 @@ from keras.preprocessing import image
 import numpy as np
 from keras.applications import vgg16
 
+f = Path('model_structure.h5')
+model_structure = f.read_text()
+
+model = model_from_json(model_structure)
+
+model.load_weights('model_weights.h5')
+
+img = image.load_img('dog.png', target_size=(64, 64))
+
 class_labels = [
     'Plane',
     'Car',
