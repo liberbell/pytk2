@@ -20,9 +20,9 @@ images = np.expand_dims(image_array, axis=0)
 images = vgg16.preprocess_input(images)
 
 feature_extraction_model = vgg16.VGG16(weights='imagenet', include_top=False, input_shape(64, 64, 3))
-features =
+features = feature_extraction_model.predict(images)
 
-results =
+results = model.predict(features)
 
 single_result = results [0][0]
 
