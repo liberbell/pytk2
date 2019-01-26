@@ -17,6 +17,15 @@ image_array = image.img_to_array(img)
 
 images = np.expand_dims(image_array, axis=0)
 
+images = vgg16.preprocess_input(images)
+
+feature_extraction_model =
+features =
+
+results =
+
+single_result = results [0][0]
+
 class_labels = [
     'Plane',
     'Car',
