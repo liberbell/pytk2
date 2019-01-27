@@ -26,4 +26,4 @@ results = model.predict(features)
 
 single_result = results [0][0]
 
-print('Likelihood that this image contains a dog: {}%'.format(int(single_result * )))
+print('Likelihood that this image contains a dog: {}%'.format(int(single_result * 100)))
