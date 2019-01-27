@@ -4,8 +4,8 @@ from keras.preprocessing import image
 import numpy as np
 from keras.applications import vgg16
 
-f = Path('model_structure.h5')
-model_structure = f.read_text()
+f = open('model_structure.h5', 'r')
+model_structure = f.read()
 
 model = model_from_json(model_structure)
 
