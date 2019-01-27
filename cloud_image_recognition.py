@@ -16,5 +16,10 @@ with open(IMAGE_FILE, mode='rb') as f:
 batch_request =[{
     'image': {
         'content': encoded_image_data
-    }
+    },
+    'features': [
+        {
+            'type':'LABEL_DETECTION'
+        }
+    ]
 }]
