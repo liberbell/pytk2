@@ -4,7 +4,7 @@ from keras.preprocessing import image
 import numpy as np
 from keras.applications import vgg16
 
-f = open('model_structure.h5', 'r')
+f = open('model_structure.json', 'r')
 model_structure = f.read()
 
 model = model_from_json(model_structure)
