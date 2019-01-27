@@ -12,3 +12,9 @@ service = googleapiclient.discovery.build('vison', 'v1', credentials=credentials
 with open(IMAGE_FILE, mode='rb') as f:
     image_data = f.read()
     encoded_image_data = b64encode(image_data).decode('UTF-8')
+
+batch_request =[{
+    'image': {
+        'content': encoded_image_data
+    }
+}]
