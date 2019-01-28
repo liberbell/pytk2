@@ -8,7 +8,7 @@ IMAGE_FILE = 'road_sign.jpg'
 CREDENTIALS_FILE = 'credential.json'
 
 credentials = GoogleCredentials.from_stream(CREDENTIALS_FILE)
-service = googleapiclient.discovery.build('vison', 'v1', credentials=credentials)
+service = googleapiclient.discovery.build('vision', 'v1', credentials=credentials)
 
 with open(IMAGE_FILE, mode='rb') as f:
     image_data = f.read()
