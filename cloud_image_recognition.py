@@ -28,3 +28,7 @@ response = request.execute()
 
 if 'error' in response:
     raise RuntimeError(response['error'])
+
+labels = response['responses'][0]['labelAnnotations']
+
+for label in labels:
