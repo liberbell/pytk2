@@ -4,7 +4,7 @@ import googleapiclient.discovery
 # from oauth2client.client import GoogleCredentials
 from oauth2client.client import GoogleCredentials
 
-IMAGE_FILE = 'text.jpg'
+IMAGE_FILE = 'text.png'
 CREDENTIALS_FILE = 'credential.json'
 
 credentials = GoogleCredentials.from_stream(CREDENTIALS_FILE)
