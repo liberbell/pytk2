@@ -25,3 +25,6 @@ batch_request =[{
 }]
 request = service.images().annotate(body={'requests':batch_request})
 response = request.execute()
+
+if 'error' in response:
+    raise RuntimeError(response['error'])
