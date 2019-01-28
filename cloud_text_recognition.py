@@ -1,7 +1,6 @@
 from base64 import b64encode
 
 import googleapiclient.discovery
-# from oauth2client.client import GoogleCredentials
 from oauth2client.client import GoogleCredentials
 
 IMAGE_FILE = 'text.png'
