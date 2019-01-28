@@ -32,3 +32,4 @@ if 'error' in response:
 labels = response['responses'][0]['labelAnnotations']
 
 for label in labels:
+    print(label['description'], label['score'])
