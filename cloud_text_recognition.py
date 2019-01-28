@@ -4,7 +4,7 @@ import googleapiclient.discovery
 # from oauth2client.client import GoogleCredentials
 from oauth2client.client import GoogleCredentials
 
-IMAGE_FILE = 'road_sign.jpg'
+IMAGE_FILE = 'text.jpg'
 CREDENTIALS_FILE = 'credential.json'
 
 credentials = GoogleCredentials.from_stream(CREDENTIALS_FILE)
@@ -20,7 +20,7 @@ batch_request =[{
     },
     'features': [
         {
-            'type':'LABEL_DETECTION'
+            'type':'TEXT_DETECTION'
         }
     ]
 }]
@@ -30,7 +30,9 @@ response = request.execute()
 if 'error' in response:
     raise RuntimeError(response['error'])
 
-labels = response['responses'][0]['labelAnnotations']
+extracted_texts = response['responses'][0]['textAnnotations']
 
-for label in labels:
-    print(label['description'], label['score'])
+extracted_texts = extracted_texts[0]
+print(extracted_texts['description'])
+
+print(extracted_texts[''])
