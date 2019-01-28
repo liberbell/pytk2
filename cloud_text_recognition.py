@@ -35,4 +35,4 @@ extracted_texts = response['responses'][0]['textAnnotations']
 extracted_texts = extracted_texts[0]
 print(extracted_texts['description'])
 
-print(extracted_texts[''])
+print(extracted_texts['boundingPoly'])
